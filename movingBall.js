@@ -24,7 +24,6 @@ function init() {
 	lastTouch = {x:0, y:0};
 	mouseDownInsideball = false;
 	touchDownInsideball = false;
-	//test
 	doLayout(document);
 	
 

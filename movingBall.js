@@ -6,8 +6,8 @@ var mouseDownInsideball;
 var touchDownInsideball;
 var movementTimer;
 var lastMouse, lastOrientation, lastTouch;
-var centerX = 200;
-var centerY = 500;
+var centerX = screen.width / 4;
+var centerY = screen.height / 4;
                             
 // Initialisation on opening of the window
 function init() {
@@ -119,7 +119,7 @@ function inHole(xDelta, yDelta){
 }
 
 function moveBall(xDelta, yDelta) {	
-if (start== true && paused == false){
+if (running== true){
 	ball.x += xDelta;
 	ball.y += yDelta;
 	ballOutOff();
@@ -227,57 +227,4 @@ function onTouchUp(event) {
 function onDeviceOrientationChange(event) {
 	lastOrientation.gamma = event.gamma;
 	lastOrientation.beta = event.beta;
-}
-
-
-
-var myVar;
-var tijd = 0;
-var paused = false;
-var start = false;
-
-function count(){
-	++tijd
-	document.getElementById("counter").innerHTML=tijd;
-}
-
-function Start(){
-if (paused==false && start==false){
-	myVar = setInterval(function(){count()},1000);
-	start=true
-}	
-}
-
-function Continuef(){
-if (paused==true){
-	myVar = setInterval(function(){count()},1000);
-	paused=false;
-	}
-}
-
-function Pause(){
-	clearInterval(myVar);
-	paused=true;	
-}
-
-function stop(){
-	clearInterval(myVar);
-	tijd=0;
-	document.getElementById("counter").innerHTML=tijd;
-	start=false;
-	pause=false;
-
-}
-
-function drawcirkel(){
-
-
-      context.beginPath();
-      context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
-      context.fillStyle = 'green';
-      context.fill();
-      context.lineWidth = 5;
-      context.strokeStyle = '#003300';
-      context.stroke();
-	  
 }

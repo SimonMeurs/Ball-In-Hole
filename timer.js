@@ -1,30 +1,30 @@
-var myVar;
 var tijd = 0;
-var paused = false;
-var start = false;
+var timer;
+var running = false;
 
-function count(){
-	++tijd
-	document.getElementById("counter").innerHTML=tijd;
+function continueTimer(){
+    timer = setInterval(addTime,1000);
+    running = true;
 }
 
-function Start(){
-if (paused==false && start==false){
-	myVar = setInterval(function(){count()},1000);
-	start=true
-}	
+function startTimer(){
+    clearInterval(timer);
+    tijd = 0;
+    setInhoud();
+    timer = setInterval(addTime,1000);
+    running = true;
 }
 
-function Continuef(){
-if (paused==true){
-	myVar = setInterval(function(){count()},1000);
-	paused=false;
-	}
+function addTime(){
+    tijd++;
+    setInhoud();
 }
 
-function Pause(){
-	clearInterval(myVar);
-	paused=true;
+function stopTimer(){
+    clearInterval(timer);
+    running = false;
+}
 
-	
+function setInhoud() {
+    document.getElementById("countText").innerHTML = tijd;
 }

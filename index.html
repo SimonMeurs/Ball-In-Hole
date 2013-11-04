@@ -9,15 +9,15 @@
 		<script src="timer.js"></script> 
 	</head>
     <body>
-		<div id="counter"><h2>0</h2></div>
+		<div id="counter"><p id="countText">0</p></div>
         <!--<a id="fullscreenButton" class="fadable" href="javascript:onFullscreen(event);" style="display: none;"> � </a>-->
         <canvas id="surface">
 		Your Browser doesn't support canvas!
 		</canvas>
 		<ul id="buttonlist">
-			<li><input type="button" id="btnStart" value="Start" onclick="Start()"/></li>
-			<li><input type="button" id="btnContinue" value="Continue" onclick="Continuef()"/></li>
-			<li><input type="button" id="btnPause" value="Pause" onclick="Pause()"/></li>
+			<li><input type="button" id="btnStart" value="Start" onclick="startTimer()"/></li>
+			<li><input type="button" id="btnContinue" value="Continue" onclick="continueTimer()"/></li>
+			<li><input type="button" id="btnPause" value="Pause" onclick="stopTimer()"/></li>
 		</ul>
 
     </body>

@@ -16,6 +16,11 @@ body {
     color: #3c3bff;
 }
 
+#countText {
+    font-size: 500%;
+    margin-top: 0px;
+}
+
 #surface{	
 	height: 65%;
     background-color: #ffffff;

@@ -76,10 +76,10 @@ function renderBall() {
     var radius = 50;				
 	context.beginPath();
     context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
-    context.fillStyle = 'gray';
+    context.fillStyle = 'grey';
     context.fill();
     context.lineWidth = 5;
-    context.strokeStyle = '#003300';
+    context.strokeStyle = '#111111';
     context.stroke();
 	
 	context.beginPath();

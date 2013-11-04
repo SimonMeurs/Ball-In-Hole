@@ -47,33 +47,23 @@ function doLayout(event) {
 	var surface = document.getElementById('surface');
 	surface.width = winW;
 	surface.height = winH;
-	radius = 50;
+	radius = 20;
 	ball = {	radius:radius,
 				x:Math.round(winW/2),
 				y:Math.round(winH/2),
 				color:'rgba(100, 100, 100, 255)'};
 				
 	renderBall();
-	
-	var context = surface.getContext('2d');   
-    radius = 50;
-	context.beginPath();
-    context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
-    context.fillStyle = 'green';
-    context.fill();
-    context.lineWidth = 5;
-    context.strokeStyle = '#001100';
-    context.stroke();
 
 }
 	
 function renderBall() {
 	var surface = document.getElementById('surface');
-	var context = surface.getContext('2d');
+	context = surface.getContext('2d');
 	context.clearRect(0, 0, surface.width, surface.height);
 	
-	var context = surface.getContext('2d');   
-    var radius = 50;				
+	context = surface.getContext('2d');
+    var radius = 20;
 	context.beginPath();
     context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
     context.fillStyle = 'grey';
